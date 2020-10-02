@@ -48,10 +48,10 @@ The following tables serve as a summary of the choosen metrics.
 | ------------- | ------------- | ------------- | 
 | Number of Cookies (C)  | # of unique daily cookies to view course overview page  | 3000  |
 | Number of Clicks (CL)  | # of unique daily cookies to click the 'start free trial' button |  240  |
-| Click-Through-Probability (CTP)  | \frac{# of clicks}{# of cookies}  |  0.01  | 
+| Click-Through-Probability (CTP)  | # of clicks/# of cookies  |  0.01  | 
 
 | Evaluation Metric Name | Definition/Formula  | dmin  |
 | ------------- |-------------| -----|
-| Gross Conversion (GC) | $\frac{# of user-ids enrolled/# of clicks} | -0.01 |
-| Retention (R)   | $\frac{# of user-ids that paid/# of user-ids enrolled}  |  0.01 |
-| Net Conversion (NC) | $\frac{# of user-ids paid/# of cookies}    |   0.00075 |
+| Gross Conversion (GC) | # of user-ids enrolled/# of clicks | -0.01 |
+| Retention (R)   | # of user-ids that paid/# of user-ids enrolled  |  0.01 |
+| Net Conversion (NC) | # of user-ids paid/# of cookies   |   0.00075 |
