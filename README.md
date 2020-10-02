@@ -22,9 +22,11 @@ Experiment is conducted by Udacity, a website focusing on online courses. The bu
 ## Experiment Design
 
 **Unit of diversion (provided by Udacity)**
+
 Unit of diversion is a cookie, but if the student enrolls in the free trial, they are tracked by user-id from that point forward. The same user-id cannot enroll in the free trial twice. For users that do not enroll, their user-id is not tracked in the experiment, even if they were signed in when they visited the course overview page.
 
 **Metric Choice**
+
 For an a/b testing experiment, we need to define two types of metrics: invariant and evaluation metrics. 
 
 *Invariant metrics* are metrics that should not change cross the experiment & control groups. These metrics are used for "sanity checks" - that is, using the it to check if the experiment setup and results make sense.
@@ -46,10 +48,10 @@ The following tables serve as a summary of the choosen metrics.
 | ------------- | ------------- | ------------- | 
 | Number of Cookies (C)  | # of unique daily cookies to view course overview page  | 3000  |
 | Number of Clicks (CL)  | # of unique daily cookies to click the 'start free trial' button |  240  |
-| Click-Through-Probability (CTP)  | # of clicks/# of cookies  |  0.01  | 
+| Click-Through-Probability (CTP)  | $\frac# of clicks/# of cookies  |  0.01  | 
 
 | Evaluation Metric Name | Definition/Formula  | dmin  |
 | ------------- |-------------| -----|
-| Gross Conversion (GC) | # of user-ids enrolled/# of clicks | -0.01 |
-| Retention (R)   | # of user-ids that paid/# of user-ids enrolled  |  0.01 |
-| Net Conversion (NC) | # of user-ids paid/# of cookies    |   0.00075 |
+| Gross Conversion (GC) | $\frac# of user-ids enrolled/# of clicks | -0.01 |
+| Retention (R)   | $\frac# of user-ids that paid/# of user-ids enrolled  |  0.01 |
+| Net Conversion (NC) | $\frac# of user-ids paid/# of cookies    |   0.00075 |
