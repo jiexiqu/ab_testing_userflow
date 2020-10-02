@@ -27,10 +27,29 @@ Unit of diversion is a cookie, but if the student enrolls in the free trial, the
 **Metric Choice**
 For an a/b testing experiment, we need to define two types of metrics: invariant and evaluation metrics. 
 
-Invariant metrics are metrics that should not change cross the experiment & control groups. These metrics are used for "sanity checks" - that is, using the it to check if the experiment setup and results make sense.
+*Invariant metrics* are metrics that should not change cross the experiment & control groups. These metrics are used for "sanity checks" - that is, using the it to check if the experiment setup and results make sense.
 In this experiment, we have choosen the following to be the invariant metrics:
+- Number of cookies: The number of unique daily cookies to view the course overview page. This invariant metric is the unit of diversion, and is expected to similar for the control and experiment groups. 
+- Number of clicks: The number of unique daily cookies to click the 'start free trial' button (which happens before the free trial screener). This is a good invariant metric because at this point in the user funnel, all users still have the same experience so the experiment should not have any impacts on this metric - meaning both groups should have similar values for this metric. 
+- Click-through-probability: Number of unique daily cookies to click the 'start free trial' button divided by number of unique cookies to view the course overview page. Again, all user experiences are still the same for both groups at this point, thus, metric cannot be impacted by the treatment. 
+
+
+*Evaluation metrics* are the metrics that are expected to change across the treatment and control groups. For each metric, there is a predetermined minimum difference (dmin) that serve as a practical significance to the business - basically, it is the minimum change that must be observed for consideration in launching the experiment. 
+The following are the choosen evaluation metrics:
+- Gross conversion: Number of user-ids to complete checkout and enroll in the free trial divided by number of unique cookies to click the 'start free trial' button. For this metric, we expect the treatment group to be lower than that of the control group. Through the treatment, we expect to redirect students who don't have enough time to study - thus not a good fit for the paid version, to the free version.  
+- Retention: Number of user-ids to remain enrolled past the 14-day boundary (and thus make at least one payment) divided by number of user-ids to complete checkout. For this metric, we expect it to increase for the treatment group since we filtered out students who are likely to churn via the screener. 
+- Net conversion: Number of user-ids to remain enrolled past the 14-day boundary (and thus make at least one payment) divided by the number of unique cookies to click the 'start free trial' button. For this metric, we hope to observe an increase for the treatment group, but this will all depend on the gross conversion and retention. 
+
+The following tables serve as a summary of the choosen metrics. 
+
 | Invariant Metric Name | Definition/Formula | dmin
 | ------------- | ------------- | ------------- | 
 | Number of Cookies (C)  | # of unique daily cookies to view course overview page  | 3000  |
-| Number of Clicks (CL)  | # of unique daily cookies to click the 'start free trial' button (happens before the screener)  |  240  |
-| Click-Through-Probability (CTP)  | CL/C  |  0.01  | 
+| Number of Clicks (CL)  | # of unique daily cookies to click the 'start free trial' button |  240  |
+| Click-Through-Probability (CTP)  | # of clicks/# of cookies  |  0.01  | 
+
+| Evaluation Metric Name | Definition/Formula  | dmin  |
+| ------------- |-------------| -----|
+| Gross Conversion (GC) | # of user-ids enrolled/# of clicks | -0.01 |
+| Retention (R)   | # of user-ids that paid/# of user-ids enrolled  |  0.01 |
+| Net Conversion (NC) | # of user-ids paid/# of cookies    |   0.00075 |
