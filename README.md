@@ -54,7 +54,12 @@ The following tables serve as a summary of the choosen metrics.
 | ------------- |-------------| -----|
 | Gross Conversion (GC) | # of user-ids enrolled/# of clicks | -0.01 |
 | Retention (R)   | # of user-ids that paid/# of user-ids enrolled  |  0.01 |
-| Net Conversion (NC) | # of user-ids paid/# of cookies   |   0.00075 |
+| Net Conversion (NC) | # of user-ids paid/# of cookies   |   0.0075 |
+
+In summary, in order to consider launching the feature, the following result need to be observed:
+- Decrease in gross conversion with increased net conversion: meaning less students are enrolling in the free trial but more students are styaing after the free trial 
+- Increase in retention: meaning more students staying beyond the free trial
 
 
+## Measuring Variability
 
