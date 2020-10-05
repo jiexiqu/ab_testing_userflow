@@ -55,3 +55,6 @@ The following tables serve as a summary of the choosen metrics.
 | Gross Conversion (GC) | # of user-ids enrolled/# of clicks | -0.01 |
 | Retention (R)   | # of user-ids that paid/# of user-ids enrolled  |  0.01 |
 | Net Conversion (NC) | # of user-ids paid/# of cookies   |   0.00075 |
+
+
+
