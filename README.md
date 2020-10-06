@@ -1,6 +1,7 @@
 # A/B Testing - Deciding the Effectiveness of Adding Screener in User Flow on Decreasing Early Course Cancellation
 
 ## Experiment Overview
+
 Experiment is conducted by Udacity, a website focusing on online courses. The business goal is to maximizing course completion by their users/students. 
 
 **Control - Before Treatment/Change**
@@ -62,4 +63,12 @@ In summary, in order to consider launching the feature, the following result nee
 
 
 ## Measuring Variability
+
+For this experiment, we were given estimates of the baseline values for the metris. We will compute the variability for each evaluation metric. Higher the variability of a metric, the less pratical to use it as a metric in the experiment because it will be harder to reach a significant result. 
+Will be computing analytical estimate of metrics' standard deviation. Since the unit of diversion is equal to the unit of analysis, analytically computed variability is likely to be very close to empirically computed variability. Both Gross Conversion (GC) and Net Conversion (NC) fulfill the case described above. Retention (R) actually has a different unit of analysis, but we can start out by calcuating its variance analytically, if we end up using R as a metric, we can calculate the empricial variability. 
+
+**Scaling**
+We were given a sample size of 5,000 cookies visiting the course overview page per day. Since the given estimates of the baseline values have 40,000 cookies per day, we will scale the collected data first. The original data and scaled are shown below. 
+![scaled_estimate_bv](image/scaled_estimate_bv.png)
+
 
