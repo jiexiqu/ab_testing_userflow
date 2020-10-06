@@ -69,6 +69,6 @@ Will be computing analytical estimate of metrics' standard deviation. Since the 
 
 **Scaling**
 We were given a sample size of 5,000 cookies visiting the course overview page per day. Since the given estimates of the baseline values have 40,000 cookies per day, we will scale the collected data first. The original data and scaled are shown below. 
-![scaled_estimate_bv](image/scaled_estimate_bv.png)
+![scaled_estimate_bv](images/scaled_estimate_bv.png)
 
 
