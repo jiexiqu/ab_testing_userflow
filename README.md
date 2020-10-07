@@ -82,3 +82,40 @@ We were given a sample size of 5,000 cookies visiting the course overview page p
 | Net Conversion (NC) | 0.0156 |
 
 ## Experiment Sizing
+
+**Number of Samples vs. Power**
+
+Number of pageviews required for each evaluation metric were calculated using an alpha = 0.05 and beta = 0.2. We wanted to know the pageviews needed for each evaluation metric to achieve statistical power of 80%. 
+
+*Gross Conversion* 
+
+| sample size | number of groups | total sample size | clicks/pagview ratio | total pageviews needed |
+| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
+| 25,699 cookies who click <br> 'free trial' per group| 2 | 51,398 | 3,200/40,000 = 0.08 | 642,473 |
+
+*Retention*
+
+| sample size | number of groups | total sample size | enrollment/pageview ratio | total pageviews needed |
+| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
+| 39,103 enrollments per group| 2 | 78,206 | 0.20625x0.08 = 0.0165 | 4,739,772 |
+
+*Net Conversion*
+
+| sample size | number of groups | total sample size | clicks/pagview ratio | total pageviews needed |
+| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
+| 27,171 cookies who click <br> 'free trial' per group| 2 | 54,342 | 0.08 | 679,282 |
+
+To test and evaluate all three metrics, we would need a total of 4,739,772 pageviews. This seems unrealistically high. 
+To test based on Gross Conversion, we need 642,473 pageviews, and to additionally test using metric Net Conversion, 679,282 pageviews are needed. Since the pageviews for Net Conversion is more than what was needed for Gross Conversion, we will use the higher number and will be evaluating both metrics.  
+
+
+**Duration vs. Exposure**
+
+From our calculations, if we consider Retention, we would need a total of 4,739,772 pageviews for this experiment. Given the baseline value of daily pageview = 40,000, it would need around 119 days to complete this assuming we are using 100% of our traffic. This is pratically impossible because of the long duration and the risk of using all of the traffic, so we will not be using this metric. 
+As mentioned before, it is risky to use 100% of our traffic for an experiment. Some of the risks include unhappy students who do not like the experiment userflow, lower conversion, and prevent the possibility of performing other experiments. Instead, we will use 50% of our traffic and divert it to two groups. 
+
+Given 40,000 pageviews per day, 50% of this traffic will be used for the experiment and will need ~ 34 days to run the experiment. 
+This is a bit longer than the ideal 1-3 weeks, since the nature of this experiment shouldn't be very high risk and if we also consider the needs of other possible experiments, we could incease the percentage of traffic diverted to 70% or even 80% >> reducing to 22 - 25 days. 
+
+
+
