@@ -123,6 +123,7 @@ This is a bit longer than the ideal 1-3 weeks, since the nature of this experime
 The experiment data is in two csv files, one for the control group, one for the experiment group. We load them as two separate dataframes. 
 
 **Sanity Check**
+
 First, we run a sanity check on the invariant metrics to verify that the experiment was conducted as expected. If the experiment had run properly and no influence from other factors, we would expect to see equal diversion into the experiment and control group. So for invariant metrics: 'number of cookies' and 'number of clicks on start-free-trial', we expect the amount of cookies (or clicks) in the control group to be 50% of the total cookies (or clicks) in both groups since they should be assigned randomly to either the control or experiment group. If we consider being assigned to control group as a 'success', we can use the binomial distribution to model the number of successes in the sample and perform one-proportion z-test for the sanity check. Since the number of samples (n) is large, we can further assume the sampling distribution approaches a normal distribution due to the Central Limit Theorem. 
 
 For the invariant metric 'click-through-probability', we want to check if the probability is significantly different for the control and experiment group. For this, we can conduct a two proportion z-test with a click being interpreted as a success, and check the CTP for both groups. We assume normal distribution.  
@@ -138,6 +139,6 @@ For all three metrics, we will try both approaches:
 | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
 | Number of Cookies| 0.5 | 0.5006 | 0.4988 to 0.5012 | 0.2878 | passed |
 | Number of Clicks | 0.5 | 0.5005 | 0.4959 to 0.5041 | 0.8239 | passed |
-| Click-Through-Probability | na | 0.0001 | -0.0013 to 0.0013 | 0.9317 | passed |
+| Click-Through-Probability | n/a | 0.0001 | -0.0013 to 0.0013 | 0.9317 | passed |
 
 **Result Analysis**
