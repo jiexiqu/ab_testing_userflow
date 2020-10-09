@@ -148,12 +148,12 @@ Next, we analyzed the data in regards to the evaluation metrics. We want to chec
 2. Computed the p-value and compare to alpha = 0.05. If p-value < alpha, we can reject the null hypothesis, which indicates there is a statistical significance for the difference between the control and experiment group. The hypotheses for both evaluation metrics are:
     
     For Gross Conversion:
-        - H<sub>0</sub: GC<sub>control</sub = GC<sub>treatment</sub
-        - H<sub>a</sub: GC<sub>control</sub ≠ GC<sub>treatment</sub
+        - H<sub>0</sub>: GC<sub>control</sub> = GC<sub>treatment</sub>
+        - H<sub>a</sub>: GC<sub>control</sub> ≠ GC<sub>treatment</sub>
     
     For Net Conversion: 
-        - H<sub>0</sub: NC<sub>control</sub = NC<sub>treatment</sub
-        - H<sub>a</sub: NC<sub>control</sub ≠ NC<sub>treatment</sub
+        - H<sub>0</sub>: NC<sub>control</sub> = NC<sub>treatment</sub>
+        - H<sub>a</sub>: NC<sub>control</sub> ≠ NC<sub>treatment</sub>
 
 To test for pratical significance, if the confidence interval does not include the pratical significance boundary (dmin that was previously given), then the change is pratically significant. 
 
