@@ -147,11 +147,9 @@ Next, we analyzed the data in regards to the evaluation metrics. We want to chec
 1. Computed the respective confidence interval around the observed difference between the conversion metrics, if the CI does not contain 0, it is statistically significant. (used 95% confidence)
 2. Computed the p-value and compare to alpha = 0.05. If p-value < alpha, we can reject the null hypothesis, which indicates there is a statistical significance for the difference between the control and experiment group. The hypotheses for both evaluation metrics are:
     
-    For Gross Conversion:
-        - H<sub>0</sub>: GC<sub>control</sub> = GC<sub>treatment</sub>
+        - H<sub>0</sub>: GC<sub>control</sub> = GC<sub>treatment</sub>      
         - H<sub>a</sub>: GC<sub>control</sub> ≠ GC<sub>treatment</sub>
     
-    For Net Conversion: 
         - H<sub>0</sub>: NC<sub>control</sub> = NC<sub>treatment</sub>
         - H<sub>a</sub>: NC<sub>control</sub> ≠ NC<sub>treatment</sub>
 
