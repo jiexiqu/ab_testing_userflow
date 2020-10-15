@@ -2,7 +2,7 @@
 
 ## Experiment Overview
 
-Experiment is conducted by Udacity, a website focusing on online courses. The business goal is to maximizing course completion by their users/students. 
+Experiment is conducted by Udacity, a website focusing on online courses. The business goal is to maximize course completion by their users/students. 
 
 **Control - Before Treatment/Change**
 - At time of the experiment, Udacity courses have two options on the course overview page: 'start free trial', and 'access course materials' 
